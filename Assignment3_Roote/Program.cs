@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Drawing;
 using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -12,8 +13,8 @@ namespace Assignment3_Roote
             //Create a one-dimensional array double[] prices with the values 25.5, 40.0, 33.75. Print 
             //the second price(index 1).
 
-            double[] Prices = { 25.5, 40.0, 33.75 };
-            Console.WriteLine(Prices[1]);
+            //double[] Prices = { 25.5, 40.0, 33.75 };
+            //Console.WriteLine(Prices[1]);
 
             #endregion
 
@@ -77,6 +78,18 @@ namespace Assignment3_Roote
 
             #endregion
 
+            #region Question8
+            //Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a 
+            //new array { 10.0, 12.5, 15.0 }.Call it with your prices array and print prices.Length
+            //afterward
+
+            double[] Prices = { 25.5, 40.0, 33.75, 10.0 };
+            ReplaceArray(ref Prices);
+            Console.WriteLine($"Prices length afterward: {Prices.Length}"); 
+
+
+            #endregion
+
 
 
 
@@ -113,6 +126,12 @@ namespace Assignment3_Roote
         static void AddBonusPagesByRef(ref int Pages)
         {
             Pages = 50 + Pages;
+        }
+
+        //Question8
+        static void ReplaceArray(ref double[] prices)
+        {
+            prices = new double[] { 10.0, 12.5, 15.0 };
         }
 
 
