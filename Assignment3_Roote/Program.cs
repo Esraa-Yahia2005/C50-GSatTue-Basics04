@@ -36,6 +36,16 @@ namespace Assignment3_Roote
             #endregion
 
 
+            #region Question4
+            //Write a method PrintBookTitle(string title) that prints "Book title: " + title. Call it with 
+            //"Clean Code".
+
+            PrintBookTitle("Clean Code");
+
+
+            #endregion
+
+
         }
 
 
@@ -44,5 +54,13 @@ namespace Assignment3_Roote
         {
             Console.WriteLine("Welcome to the Library!");
         }
+
+        //Question4
+        static void PrintBookTitle(string title)
+        {
+            Console.WriteLine("Book title: " + title);
+        }
+
+
     }
 }
