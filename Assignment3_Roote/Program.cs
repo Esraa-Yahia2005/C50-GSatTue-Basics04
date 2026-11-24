@@ -1,4 +1,5 @@
-﻿using System.Runtime.Intrinsics.X86;
+﻿using System.Diagnostics;
+using System.Runtime.Intrinsics.X86;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment3_Roote
@@ -56,6 +57,15 @@ namespace Assignment3_Roote
 
             #endregion
 
+            #region Question6
+            //Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it 
+           // with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward.What do you expect to
+           //see, and why? 
+
+            ApplyDiscount(new double[] { 25.5, 40.0 });
+
+            #endregion
+
 
         }
 
@@ -77,6 +87,13 @@ namespace Assignment3_Roote
         static void AddBonusPages(int Pages)
         {
             Console.WriteLine($"After bonus: Pages = { 50+Pages}");
+        }
+
+
+        //Question6
+        static void ApplyDiscount(double[] Prices)
+        {
+            Console.WriteLine($"Prices[0] afterward {Prices[0] - 5}");
         }
 
 
