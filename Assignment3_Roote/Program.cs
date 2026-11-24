@@ -67,6 +67,16 @@ namespace Assignment3_Roote
             #endregion
 
 
+            #region Question7
+            //Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref. 
+            //Call it and print pages afterward. How is the result different from question 5 ?
+
+            int Pages = 400;
+            AddBonusPagesByRef(ref Pages);
+
+            #endregion
+
+
         }
 
 
@@ -94,6 +104,12 @@ namespace Assignment3_Roote
         static void ApplyDiscount(double[] Prices)
         {
             Console.WriteLine($"Prices[0] afterward {Prices[0] - 5}");
+        }
+
+        //Question7
+        static void AddBonusPagesByRef(ref int Pages)
+        {
+            Console.WriteLine($"After bonus: Pages = {50 + Pages}");
         }
 
 
