@@ -1,4 +1,5 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
+﻿using System.Runtime.Intrinsics.X86;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Assignment3_Roote
 {
@@ -45,6 +46,16 @@ namespace Assignment3_Roote
 
             #endregion
 
+            #region Question5
+            //Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable 
+            //int pages = 400; and print pages afterward. What do you expect to see, and why?
+
+
+            AddBonusPages(400);   //450
+
+
+            #endregion
+
 
         }
 
@@ -59,6 +70,13 @@ namespace Assignment3_Roote
         static void PrintBookTitle(string title)
         {
             Console.WriteLine("Book title: " + title);
+        }
+
+
+        //Question5
+        static void AddBonusPages(int Pages)
+        {
+            Console.WriteLine($"After bonus: Pages = { 50+Pages}");
         }
 
 
