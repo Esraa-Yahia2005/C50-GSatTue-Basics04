@@ -85,7 +85,19 @@ namespace Assignment3_Roote
 
             double[] Prices = { 25.5, 40.0, 33.75, 10.0 };
             ReplaceArray(ref Prices);
-            Console.WriteLine($"Prices length afterward: {Prices.Length}"); 
+            Console.WriteLine($"Prices length afterward: {Prices.Length}");
+
+
+            #endregion
+
+
+            #region Question9
+            //Write a method bool TryGetPrice(string title, out double price) that returns true and sets 
+            //price to 25.5 if title is "Clean Code", otherwise returns false and sets price to 0.Call it
+            //and print the price if found
+
+           Console.WriteLine(TryGetPrice("Clean Code", out double price));
+            Console.WriteLine(price);
 
 
             #endregion
@@ -132,6 +144,24 @@ namespace Assignment3_Roote
         static void ReplaceArray(ref double[] prices)
         {
             prices = new double[] { 10.0, 12.5, 15.0 };
+        }
+
+
+        //Question9
+       static bool TryGetPrice(string title, out double price)
+        { 
+            if(title == "Clean Code")
+            {
+                price = 25.5;
+                return true;
+            }
+            else
+            {
+                price = 0;
+                return false;
+            }
+
+            
         }
 
 
