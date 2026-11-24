@@ -120,7 +120,14 @@ namespace Assignment3_Roote
             #endregion
 
 
+            #region Question12
+            //Write a method PrintAllTitles(params string[] titles) that prints each title on its own line. 
+            //Call it with three book titles. 
 
+            PrintAllTitles("Clean Code", "Design Patterns", "Refactoring");
+
+
+            #endregion
 
         }
 
@@ -189,6 +196,16 @@ namespace Assignment3_Roote
         {
             Console.WriteLine($"Title: {title}, Pages: {pages}");
         }
+
+        //Question12
+        static void PrintAllTitles(params string[] titles)
+        {
+            foreach (var title in titles)
+            {
+                Console.WriteLine(title);
+            }
+        }
+
 
 
     }
