@@ -73,8 +73,11 @@ namespace Assignment3_Roote
 
             int Pages = 400;
             AddBonusPagesByRef(ref Pages);
+            Console.WriteLine($"After bonus: Pages = {Pages}");
 
             #endregion
+
+
 
 
         }
@@ -109,7 +112,7 @@ namespace Assignment3_Roote
         //Question7
         static void AddBonusPagesByRef(ref int Pages)
         {
-            Console.WriteLine($"After bonus: Pages = {50 + Pages}");
+            Pages = 50 + Pages;
         }
 
 
